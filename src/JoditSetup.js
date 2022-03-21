@@ -14,6 +14,7 @@ export default function JoditSetup(props) {
     updateFiles,
     updateState,
     overrides,
+    ref = undefined
   } = props;
 
   let config = {
@@ -89,5 +90,5 @@ export default function JoditSetup(props) {
     input.click();
   }
 
-  return <JoditEditor config={config} value={initialValue} onChange={updateState} />;
+  return <JoditEditor ref={ref} config={config} value={initialValue} onChange={updateState} />;
 }
